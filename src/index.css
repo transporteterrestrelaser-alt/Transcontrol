@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 6mm 8mm;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-size: 10pt !important;
+  }
+
+  /* Hide navigation, headers, footers and interactive action buttons during print */
+  .no-print,
+  nav,
+  header,
+  footer,
+  button,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Reset dark container backgrounds to clean white/light surfaces with clear borders */
+  .bg-slate-900,
+  .bg-slate-950,
+  .bg-slate-800 {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+
+  .text-white,
+  .text-slate-100,
+  .text-slate-200,
+  .text-slate-300 {
+    color: #0f172a !important;
+  }
+
+  .text-slate-400,
+  .text-slate-500 {
+    color: #475569 !important;
+  }
+
+  .border-slate-800,
+  .border-slate-700 {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Status and operational badges styling on print */
+  .bg-emerald-500\/10,
+  .bg-emerald-500\/20,
+  .bg-emerald-950\/30 {
+    background-color: #ecfdf5 !important;
+    border-color: #a7f3d0 !important;
+    color: #065f46 !important;
+  }
+
+  .bg-rose-500\/10,
+  .bg-rose-500\/20,
+  .bg-rose-950\/30,
+  .bg-rose-950\/40 {
+    background-color: #fff1f2 !important;
+    border-color: #fecdd3 !important;
+    color: #9f1239 !important;
+  }
+
+  .bg-amber-500\/10,
+  .bg-amber-500\/20,
+  .bg-amber-950\/30 {
+    background-color: #fffbeb !important;
+    border-color: #fde68a !important;
+    color: #92400e !important;
+  }
+
+  .bg-blue-500\/10,
+  .bg-blue-500\/20 {
+    background-color: #eff6ff !important;
+    border-color: #bfdbfe !important;
+    color: #1e40af !important;
+  }
+
+  /* Prevent split elements across pages */
+  .break-inside-avoid,
+  .break-inside-avoid-page,
+  article,
+  section {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Modal print adjustments so report modal documents print clean across pages */
+  .fixed.inset-0 {
+    position: static !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .max-h-\[96vh\],
+  .max-h-\[94vh\],
+  .max-h-\[92vh\],
+  .max-h-\[90vh\] {
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Single-sheet Parte Diario strict print rules */
+  .parte-diario-hoja-unica {
+    width: 100% !important;
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    font-size: 9pt !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Single-sheet Mini Informe PDF strict print rules */
+  .mini-informe-pdf-hoja-unica {
+    width: 100% !important;
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    font-size: 8.5pt !important;
+    line-height: 1.2 !important;
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+}

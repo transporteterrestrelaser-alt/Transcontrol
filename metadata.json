@@ -1,0 +1,6 @@
+{
+  "name": "TransControl - Gestión de Flota y Transporte de Personal",
+  "description": "Sistema integral para control diario de capacidad operativa de flota, reporte y soluciones de taller mecánico con cálculo de tiempo fuera de servicio, y gestión de vencimiento de licencias de manejo por conductor y departamento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
